@@ -1,4 +1,4 @@
-from COBapp.views import index,signup
+from COBapp.views import index, signup, signin, login, otp_verification, urlshortner, handlingShortUrl
 """CloneOfBitly URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,4 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index),
     path('signup', signup),
+    path('signin', signin),
+    path('login', login),
+    path('otp_verification', otp_verification),
+    path('urlshortner', urlshortner),
+    path('<url>', handlingShortUrl),
 ]
